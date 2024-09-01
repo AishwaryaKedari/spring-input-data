@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: spring-input-data
+spec:
+  selector:
+    matchLabels:
+      app: spring-input-data
+  replicas: 1 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: spring-input-data
+    spec:
+      containers:
+        - name: spring-input-data
+          image: spring-input-data:latest
+# Image that will be used to containers in the cluster
+          # imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080 

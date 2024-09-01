@@ -1,0 +1,15 @@
+version: '3'
+services:
+    spring-input-data:
+        container_name: spring-input-data
+        build:
+            context: spring-input-data
+            dockerfile: Dockerfile
+        image: spring-input-data:latest
+        ports:
+            - 8080:8080
+#         networks:
+#             - spring-cloud-network
+# networks:
+#     spring-cloud-network:
+#         driver: bridge

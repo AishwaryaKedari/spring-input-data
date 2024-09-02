@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-input-data
-          image: aishwaryakedari/spring-input-data
+          image: aishwaryakedari/spring-input-data:latest
 # Image that will be used to containers in the cluster
           # imagePullPolicy: IfNotPresent
           ports:
